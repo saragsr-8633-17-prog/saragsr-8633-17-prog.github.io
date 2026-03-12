@@ -118,7 +118,7 @@ export function Admin() {
         </h1>
         
         <p className="text-gray-400 mb-8 max-w-2xl">
-           Upload images from your PC, then assign them to specific sections of your website (e.g. "isiipe-hero", "work-aether-cover"). The changes will reflect immediately.
+          Upload images from your PC, then assign them to specific sections of your website (e.g. "mtech-hero", "work-aether-cover"). The changes will reflect immediately.
         </p>
 
         {/* Upload Section */}
@@ -174,7 +174,7 @@ export function Admin() {
               <div className="flex flex-col gap-4">
                 <input 
                   type="text" 
-                  placeholder="e.g. isiipe-hero, work-pulse-cover" 
+                  placeholder="e.g. mtech-hero, work-pulse-cover" 
                   value={newSlotKey}
                   onChange={e => setNewSlotKey(e.target.value)}
                   className="bg-black border border-white/20 px-4 py-2 text-white"

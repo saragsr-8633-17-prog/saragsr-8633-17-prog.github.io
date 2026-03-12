@@ -1,12 +1,8 @@
 import { useParams, Link } from "react-router";
 import { DynamicImage } from "./DynamicImage";
-import { IsiipeHero } from "./IsiipeHero";
+import { MtechHero } from "./MtechHero";
 
 const image_d8324035aea49e978f32e461ee7c6147c00a22a1 = "https://images.unsplash.com/photo-1740721455292-e5cd29544381?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsJTIwZGFyayUyMFVJJTIwZGVzaWduJTIwbW9ja3VwJTIwbGFwdG9wJTIwc2NyZWVufGVufDF8fHx8MTc3MzI3MDc5NXww&ixlib=rb-4.1.0&q=80&w=1080";
-const isiipeHomeImage = "/images/isiipe-home.jpg";
-const isiipeBiographyImage = "/images/isiipe-biography.jpg";
-const isiipeGalleryImage = "/images/isiipe-gallery.jpg";
-const isiipeContactImage = "/images/isiipe-contact.jpg";
 
 // ---------- project data ----------
 
@@ -24,21 +20,33 @@ interface ProjectData {
 }
 
 const PROJECTS: Record<string, ProjectData> = {
-  "isiipe-showcase": {
+  "psi-lab": {
+    title: "PSI-LAB",
+    subtitle: "Public Sector Innovation Lab",
+    category: ["BRANDING", "PRINT"],
+    year: "2026",
+    type: "BRANDING",
+    description: "Brand identity and informational brochures for the Public Sector Innovation Lab (PSI-Lab), exploring system thinking and new collaborative paradigms.",
+    heroImage: "/images/psi-lab-cover.png",
+    galleryImages: [
+      "/images/psi-lab-1.png",
+      "/images/psi-lab-2.png",
+      "/images/psi-lab-3.png",
+      "/images/psi-lab-4.png",
+      "/images/psi-lab-5.png"
+    ],
+    nextProject: { title: "ISIIPE", slug: "isiipe" },
+  },
+  mtech: {
     title: "ISIIPE",
     subtitle: "Digital Presence for Community",
     category: ["WEB DEVELOPMENT", "VOLUNTEER"],
     year: "2025",
     type: "VOLUNTEER WORK",
     description:
-      "ISIIPE required a comprehensive digital overhaul to better serve their community. The UI/UX approach centered on building an elegant, highly accessible platform that prioritizes clear navigation and seamless user engagement. The result is a modern digital presence that lets the community and its mission take center stage.",
-    heroComponent: undefined, // uses IsiipeHero
-    galleryImages: [
-      isiipeHomeImage,
-      isiipeBiographyImage,
-      isiipeGalleryImage,
-      isiipeContactImage,
-    ],
+      "MTECH required a comprehensive digital overhaul to better serve their community. The UI/UX approach centered on building an elegant, highly accessible platform that prioritizes clear navigation and seamless user engagement. The result is a modern digital presence that lets the community and its mission take center stage.",
+    heroComponent: undefined, // uses MtechHero
+    galleryImages: ["/images/isiipe-home.png", "/images/isiipe-biography.png", "/images/isiipe-gallery.png", "/images/isiipe-contact.png"],
     nextProject: { title: "ISIIPE", slug: "isiipe" },
   },
   isiipe: {
@@ -48,14 +56,9 @@ const PROJECTS: Record<string, ProjectData> = {
     year: "2025",
     type: "CLIENT WORK",
     description:
-      "required a tailored personal website design for Selam Tesfaye to elevate her digital footprint. The UI/UX approach centered on building an elegant, highly accessible platform that prioritizes clear navigation and seamless user engagement. The result is a timeless digital presence that lets her work and personality take center stage.",
+      "isiipe required a tailored personal website design for Selam Tesfaye to elevate her digital footprint. The UI/UX approach centered on building an elegant, highly accessible platform that prioritizes clear navigation and seamless user engagement. The result is a timeless digital presence that lets her work and personality take center stage.",
     heroImage: undefined,
-    galleryImages: [
-      isiipeHomeImage,
-      isiipeBiographyImage,
-      isiipeGalleryImage,
-      isiipeContactImage,
-    ],
+    galleryImages: ["/images/isiipe-home.png", "/images/isiipe-biography.png", "/images/isiipe-gallery.png", "/images/isiipe-contact.png"],
     nextProject: { title: "AETHER UI", slug: "aether-ui" },
   },
   "aether-ui": {
@@ -116,7 +119,7 @@ const PROJECTS: Record<string, ProjectData> = {
       "Dark-themed portfolio template designed for photographers and visual artists. Emphasis on negative space and content hierarchy creates an immersive viewing experience that foregrounds the work itself.",
     heroImage: "https://images.unsplash.com/photo-1688141585146-1fb4a1358c87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGdlb21ldHJpYyUyMGRhcmslMjBhcnR3b3JrfGVufDF8fHx8MTc3MzE0ODQ3NXww&ixlib=rb-4.1.0&q=80&w=1080",
     galleryImages: [],
-    nextProject: { title: "ISIIPE", slug: "isiipe" },
+    nextProject: { title: "PSI-LAB", slug: "psi-lab" },
   },
 };
 
@@ -166,7 +169,7 @@ export function ProjectDetail() {
         {/* 3. Hero Image Block */}
         <div className="w-full flex justify-center bg-[#d9d9d9] px-[0px] py-[30px]">
           {isIsiipe ? (
-            <IsiipeHero />
+            <MtechHero />
           ) : project.heroImage ? (
             <div className="w-[95%] mx-auto max-w-[1400px] aspect-video md:aspect-[21/9] relative overflow-hidden border-2 border-[#D9D9D9]">
               <DynamicImage
