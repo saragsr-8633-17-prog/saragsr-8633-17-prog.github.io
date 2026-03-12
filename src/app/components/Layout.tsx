@@ -14,7 +14,6 @@ export function Layout() {
   const [hoveredNav, setHoveredNav] = useState<string | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
-  const currentYear = new Date().getFullYear();
 
   // Close menu on route change
   useEffect(() => {
@@ -154,24 +153,6 @@ export function Layout() {
 
       {/* Page Content */}
       <Outlet />
-
-      {/* Footer */}
-      <footer className="w-full px-5 md:px-16 lg:px-6 py-8 mt-12 border-t border-[#ececec]">
-        <div className="w-full flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[#6b6b6b] text-sm">
-          <p>© {currentYear} Obaid Salem. All rights reserved.</p>
-          <nav className="flex items-center gap-4">
-            <Link to="/work" className="hover:text-[#1a1a1a] transition-colors">
-              Work
-            </Link>
-            <Link to="/blog" className="hover:text-[#1a1a1a] transition-colors">
-              Blog
-            </Link>
-            <Link to="/contact" className="hover:text-[#1a1a1a] transition-colors">
-              Contact
-            </Link>
-          </nav>
-        </div>
-      </footer>
     </div>
   );
 }
