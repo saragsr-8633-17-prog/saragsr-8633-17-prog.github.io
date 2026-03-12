@@ -12,7 +12,7 @@ const PROJECTS = [
     description:
       "A modern web design and UI/UX project for ISIIPE. Focused on clean interfaces, intuitive user flows, and a polished client-facing digital experience.",
     tags: ["WEB DESIGN", "UI/UX", "CLIENT"],
-    image: "/images/isiipe-gallery.jpg",
+    image: "/images/isiipe-home.jpg",
   },
 ];
 
