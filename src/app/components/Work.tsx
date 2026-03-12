@@ -5,6 +5,17 @@ import { Link } from "react-router";
 const PROJECTS = [
   {
     id: "01",
+    title: "ISIIPE",
+    slug: "isiipe",
+    category: "WEB DEVELOPMENT",
+    year: "2025",
+    description:
+      "A modern web design and development project for ISIIPE focused on accessibility, clear navigation, and a strong digital presence.",
+    tags: ["WEB DEVELOPMENT", "UI/UX", "VOLUNTEER"],
+    image: "/images/selam1/Home.jpg",
+  },
+  {
+    id: "02",
     title: "PSI-LAB",
     slug: "psi-lab",
     category: "UI/UX DESIGN",
@@ -13,17 +24,6 @@ const PROJECTS = [
       "A modern web design and UI/UX project for PSI-LAB. Focused on clean interfaces, intuitive user flows, and a polished client-facing digital experience.",
     tags: ["WEB DESIGN", "UI/UX", "CLIENT"],
     image: "/images/psi-lab-cover.jpeg",
-  },
-  {
-    id: "02",
-    title: "ISIIPE",
-    slug: "isiipe",
-    category: "WEB DEVELOPMENT",
-    year: "2025",
-    description:
-      "A modern web design and development project for ISIIPE focused on accessibility, clear navigation, and a strong digital presence.",
-    tags: ["WEB DEVELOPMENT", "UI/UX", "VOLUNTEER"],
-    image: "/images/psi-lab-1.jpeg",
   },
 ];
 

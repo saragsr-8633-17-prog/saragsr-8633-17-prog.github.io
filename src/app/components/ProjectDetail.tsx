@@ -8,10 +8,10 @@ const psiLabImage1 = "/images/psi-lab-1.jpeg";
 const psiLabImage2 = "/images/psi-lab-2.jpeg";
 const psiLabImage3 = "/images/psi-lab-3.jpeg";
 
-const isiipeCoverImage = "/images/psi-lab-cover.jpeg";
-const isiipeImage1 = "/images/psi-lab-1.jpeg";
-const isiipeImage2 = "/images/psi-lab-2.jpeg";
-const isiipeImage3 = "/images/psi-lab-3.jpeg";
+const isiipeCoverImage = "/images/selam1/Home.jpg";
+const isiipeImage1 = "/images/selam1/Bio.jpg";
+const isiipeImage2 = "/images/selam1/Gallery.jpg";
+const isiipeImage3 = "/images/selam1/Contact.jpg";
 
 // ---------- project data ----------
 
@@ -71,7 +71,7 @@ const PROJECTS: Record<string, ProjectData> = {
     type: "CLIENT WORK",
     description:
       "ISIIPE required a tailored website design to elevate its digital footprint. The UI/UX approach centered on clear navigation, elegant presentation, and seamless user engagement.",
-    heroImage: undefined,
+    heroImage: isiipeCoverImage,
     galleryImages: [
       isiipeCoverImage,
       isiipeImage1,
@@ -170,7 +170,7 @@ export function ProjectDetail() {
     );
   }
 
-  const isBrandHeroProject = slug === "psi-lab" || slug === "isiipe";
+  const isBrandHeroProject = slug === "psi-lab";
   const hasGallery = project.galleryImages.length > 0;
 
   return (
