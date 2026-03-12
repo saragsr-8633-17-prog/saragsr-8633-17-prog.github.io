@@ -48,7 +48,7 @@ const PROJECTS: Record<string, ProjectData> = {
     year: "2025",
     type: "CLIENT WORK",
     description:
-      "isiipe required a tailored personal website design for Selam Tesfaye to elevate her digital footprint. The UI/UX approach centered on building an elegant, highly accessible platform that prioritizes clear navigation and seamless user engagement. The result is a timeless digital presence that lets her work and personality take center stage.",
+      "required a tailored personal website design for Selam Tesfaye to elevate her digital footprint. The UI/UX approach centered on building an elegant, highly accessible platform that prioritizes clear navigation and seamless user engagement. The result is a timeless digital presence that lets her work and personality take center stage.",
     heroImage: undefined,
     galleryImages: [
       isiipeHomeImage,
