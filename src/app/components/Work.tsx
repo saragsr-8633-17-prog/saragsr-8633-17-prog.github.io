@@ -14,6 +14,17 @@ const PROJECTS = [
     tags: ["WEB DESIGN", "UI/UX", "CLIENT"],
     image: "/images/psi-lab-cover.jpeg",
   },
+  {
+    id: "02",
+    title: "ISIIPE",
+    slug: "isiipe",
+    category: "WEB DEVELOPMENT",
+    year: "2025",
+    description:
+      "A modern web design and development project for ISIIPE focused on accessibility, clear navigation, and a strong digital presence.",
+    tags: ["WEB DEVELOPMENT", "UI/UX", "VOLUNTEER"],
+    image: "/images/psi-lab-1.jpeg",
+  },
 ];
 
 export function Work() {

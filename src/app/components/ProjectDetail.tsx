@@ -8,6 +8,11 @@ const psiLabImage1 = "/images/psi-lab-1.jpeg";
 const psiLabImage2 = "/images/psi-lab-2.jpeg";
 const psiLabImage3 = "/images/psi-lab-3.jpeg";
 
+const isiipeCoverImage = "/images/psi-lab-cover.jpeg";
+const isiipeImage1 = "/images/psi-lab-1.jpeg";
+const isiipeImage2 = "/images/psi-lab-2.jpeg";
+const isiipeImage3 = "/images/psi-lab-3.jpeg";
+
 // ---------- project data ----------
 
 interface ProjectData {
@@ -55,6 +60,23 @@ const PROJECTS: Record<string, ProjectData> = {
       psiLabImage1,
       psiLabImage2,
       psiLabImage3,
+    ],
+    nextProject: { title: "ISIIPE", slug: "isiipe" },
+  },
+  isiipe: {
+    title: "ISIIPE",
+    subtitle: "A Refined Digital Identity",
+    category: ["UI/UX DESIGN", "CLIENT WORK"],
+    year: "2025",
+    type: "CLIENT WORK",
+    description:
+      "ISIIPE required a tailored website design to elevate its digital footprint. The UI/UX approach centered on clear navigation, elegant presentation, and seamless user engagement.",
+    heroImage: undefined,
+    galleryImages: [
+      isiipeCoverImage,
+      isiipeImage1,
+      isiipeImage2,
+      isiipeImage3,
     ],
     nextProject: { title: "AETHER UI", slug: "aether-ui" },
   },
@@ -148,7 +170,7 @@ export function ProjectDetail() {
     );
   }
 
-  const isPsiLab = slug === "psi-lab";
+  const isBrandHeroProject = slug === "psi-lab" || slug === "isiipe";
   const hasGallery = project.galleryImages.length > 0;
 
   return (
@@ -165,7 +187,7 @@ export function ProjectDetail() {
 
         {/* 3. Hero Image Block */}
         <div className="w-full flex justify-center bg-[#d9d9d9] px-[0px] py-[30px]">
-          {isPsiLab ? (
+          {isBrandHeroProject ? (
             <PsiLabHero />
           ) : project.heroImage ? (
             <div className="w-[95%] mx-auto max-w-[1400px] aspect-video md:aspect-[21/9] relative overflow-hidden border-2 border-[#D9D9D9]">
