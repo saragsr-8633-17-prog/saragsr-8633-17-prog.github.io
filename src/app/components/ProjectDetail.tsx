@@ -31,12 +31,12 @@ interface ProjectData {
 const PROJECTS: Record<string, ProjectData> = {
   "psi-lab-showcase": {
     title: "PSI-LAB",
-    subtitle: "Digital Presence for Community",
-    category: ["WEB DEVELOPMENT", "VOLUNTEER"],
+    subtitle: "Structuring Public Information",
+    category: ["BRANDING / IDENTITY", "GRAPHIC DESIGN", "CLIENT WORK"],
     year: "2025",
-    type: "VOLUNTEER WORK",
+    type: "CLIENT WORK",
     description:
-      "PSI-LAB required a comprehensive digital overhaul to better serve their community. The UI/UX approach centered on building an elegant, highly accessible platform that prioritizes clear navigation and seamless user engagement. The result is a modern digital presence that lets the community and its mission take center stage.",
+      ", working under the Ministry of Labor and Skills, needed a straightforward way to share their information. I created this tri-fold brochure to help them do exactly that. Instead of overwhelming the reader with text, I focused on a structured, visually appealing layout that makes the content easy to scan and understand.",
     heroComponent: undefined, // uses PsiLabHero
     galleryImages: [
       psiLabCoverImage,
@@ -48,12 +48,12 @@ const PROJECTS: Record<string, ProjectData> = {
   },
   "psi-lab": {
     title: "PSI-LAB",
-    subtitle: "A Refined Digital Identity",
-    category: ["UI/UX DESIGN", "CLIENT WORK"],
+    subtitle: "Structuring Public Information",
+    category: ["BRANDING / IDENTITY", "GRAPHIC DESIGN", "CLIENT WORK"],
     year: "2025",
     type: "CLIENT WORK",
     description:
-      "PSI-LAB required a tailored personal website design for Selam Tesfaye to elevate her digital footprint. The UI/UX approach centered on building an elegant, highly accessible platform that prioritizes clear navigation and seamless user engagement. The result is a timeless digital presence that lets her work and personality take center stage.",
+      ", working under the Ministry of Labor and Skills, needed a straightforward way to share their information. I created this tri-fold brochure to help them do exactly that. Instead of overwhelming the reader with text, I focused on a structured, visually appealing layout that makes the content easy to scan and understand.",
     heroImage: undefined,
     galleryImages: [
       psiLabCoverImage,
@@ -70,7 +70,7 @@ const PROJECTS: Record<string, ProjectData> = {
     year: "2025",
     type: "CLIENT WORK",
     description:
-      "ISIIPE required a tailored website design to elevate its digital footprint. The UI/UX approach centered on clear navigation, elegant presentation, and seamless user engagement.",
+      "required a tailored personal website design for Selam Tesfaye to elevate her digital footprint. The UI/UX approach centered on building an elegant, highly accessible platform that prioritizes clear navigation and seamless user engagement. The result is a timeless digital presence that lets her work and personality take center stage.",
     heroImage: isiipeCoverImage,
     galleryImages: [
       isiipeCoverImage,
@@ -78,7 +78,7 @@ const PROJECTS: Record<string, ProjectData> = {
       isiipeImage2,
       isiipeImage3,
     ],
-    nextProject: { title: "AETHER UI", slug: "aether-ui" },
+    nextProject: { title: "PSI-LAB", slug: "psi-lab" },
   },
   "aether-ui": {
     title: "AETHER UI",
