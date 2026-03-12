@@ -35,7 +35,7 @@ const PROJECTS: Record<string, ProjectData> = {
       "/images/psi-lab-4.png",
       "/images/psi-lab-5.png"
     ],
-    nextProject: { title: "ISIIPE", slug: "isiipe" },
+    nextProject: { title: "AETHER UI", slug: "aether-ui" },
   },
   mtech: {
     title: "ISIIPE",
@@ -59,7 +59,7 @@ const PROJECTS: Record<string, ProjectData> = {
       "isiipe required a tailored personal website design for Selam Tesfaye to elevate her digital footprint. The UI/UX approach centered on building an elegant, highly accessible platform that prioritizes clear navigation and seamless user engagement. The result is a timeless digital presence that lets her work and personality take center stage.",
     heroImage: undefined,
     galleryImages: ["/images/isiipe-home.png", "/images/isiipe-biography.png", "/images/isiipe-gallery.png", "/images/isiipe-contact.png"],
-    nextProject: { title: "AETHER UI", slug: "aether-ui" },
+    nextProject: { title: "PSI-LAB", slug: "psi-lab" },
   },
   "aether-ui": {
     title: "AETHER UI",
@@ -119,7 +119,7 @@ const PROJECTS: Record<string, ProjectData> = {
       "Dark-themed portfolio template designed for photographers and visual artists. Emphasis on negative space and content hierarchy creates an immersive viewing experience that foregrounds the work itself.",
     heroImage: "https://images.unsplash.com/photo-1688141585146-1fb4a1358c87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGdlb21ldHJpYyUyMGRhcmslMjBhcnR3b3JrfGVufDF8fHx8MTc3MzE0ODQ3NXww&ixlib=rb-4.1.0&q=80&w=1080",
     galleryImages: [],
-    nextProject: { title: "PSI-LAB", slug: "psi-lab" },
+    nextProject: { title: "ISIIPE", slug: "isiipe" },
   },
 };
 

@@ -5,16 +5,6 @@ import { Link } from "react-router";
 const PROJECTS = [
   {
     id: "01",
-    title: "PSI-LAB",
-    slug: "psi-lab",
-    category: "BRANDING",
-    year: "2026",
-    description: "Brand identity and brochure design for PSI-LAB, emphasizing clear communication and engaging print layouts.",
-    tags: ["BRANDING", "PRINT", "DESIGN"],
-    image: "/images/psi-lab-cover.png",
-  },
-  {
-    id: "02",
     title: "ISIIPE",
     slug: "isiipe",
     category: "UI/UX DESIGN",
@@ -23,6 +13,16 @@ const PROJECTS = [
       "A modern web design and UI/UX project for ISIIPE. Focused on clean interfaces, intuitive user flows, and a polished client-facing digital experience.",
     tags: ["WEB DESIGN", "UI/UX", "CLIENT"],
     image: "/images/isiipe-home.png",
+  },
+  {
+    id: "02",
+    title: "PSI-LAB",
+    slug: "psi-lab",
+    category: "BRANDING",
+    year: "2026",
+    description: "Brand identity and brochure design for PSI-LAB, emphasizing clear communication and engaging print layouts.",
+    tags: ["BRANDING", "PRINT", "DESIGN"],
+    image: "/images/psi-lab-cover.png",
   },
 ];
 
