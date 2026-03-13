@@ -108,9 +108,9 @@ export function Blog() {
       </div>
 
       {/* Bottom area: About + Preview card */}
-      <div className="flex gap-12 mt-8 md:mt-[-250px] mb-[0px] md:mr-[923px] mr-0 ml-[0px]">
+      <div className="mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* About section */}
-        <div className="max-w-[280px] md:max-w-[220px] p-[0px] mx-[0px] my-0 md:my-[221px]">
+        <div className="max-w-[520px] lg:col-span-4">
           <p
             className="uppercase tracking-widest mb-4 text-[#000000]"
             style={{ fontSize: "16px", fontWeight: 700, letterSpacing: "0.1em" }}
@@ -127,10 +127,8 @@ export function Blog() {
 
           {/* Preview card */}
           <div
-            className="mt-8 bg-[#1a1a1a] overflow-hidden transition-opacity duration-300 hidden md:block"
+            className="mt-8 bg-[#1a1a1a] overflow-hidden transition-opacity duration-300 hidden md:block w-full max-w-[260px] aspect-square"
             style={{
-              width: "200px",
-              height: "200px",
               opacity: hoveredPost ? 1 : 0,
             }}
           >

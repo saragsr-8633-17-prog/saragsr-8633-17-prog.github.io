@@ -18,7 +18,7 @@ export function Home() {
       {/* White top section */}
       <div className="relative bg-[#FFFFFF] flex flex-col flex-1">
         {/* Middle two-column section */}
-        <div className="flex-1 flex items-center w-full px-5 md:px-12 lg:px-12 mx-[0px] my-[31px]">
+        <div className="flex-1 flex items-center w-full px-5 md:px-12 lg:px-12 my-6 md:my-8">
           <div className="w-full flex flex-col md:flex-row gap-8 md:gap-16 lg:gap-40">
             {/* Left column */}
             <div className="md:w-1/2">
@@ -58,7 +58,7 @@ export function Home() {
           onMouseLeave={() => setNameHover(false)}
         >
           <h1
-            className="text-[#1a1a1a] font-['Montserrat',sans-serif] text-center uppercase whitespace-nowrap relative"
+            className="text-[#1a1a1a] font-['Montserrat',sans-serif] text-center uppercase whitespace-normal md:whitespace-nowrap relative px-3"
             style={{
               ...nameStyle,
               transform: "translateZ(0)",

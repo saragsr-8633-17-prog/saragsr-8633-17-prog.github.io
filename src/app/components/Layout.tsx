@@ -48,7 +48,7 @@ export function Layout() {
   return (
     <div className="relative w-full min-h-screen flex flex-col font-['Montserrat',sans-serif] m-[0px]">
       {/* Header */}
-      <div className="relative z-50 flex items-center justify-between w-full px-5 md:px-16 lg:px-6 pt-4 mb-12 md:mb-[128px]">
+      <div className="relative z-50 flex items-center justify-between w-full px-5 md:px-12 lg:px-16 pt-4 mb-10 md:mb-20 lg:mb-24">
         {/* Top Left Starburst */}
         <Link
           to="/"
@@ -127,7 +127,7 @@ export function Layout() {
           pointerEvents: menuOpen ? "auto" : "none",
         }}
       >
-        <nav className="flex flex-col items-center gap-6">
+        <nav className="flex flex-col items-center gap-5 px-6 text-center">
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.label}
@@ -135,7 +135,7 @@ export function Layout() {
               onClick={() => setMenuOpen(false)}
               className="transition-colors duration-300"
               style={{
-                fontSize: "32px",
+                fontSize: "clamp(24px, 8vw, 32px)",
                 fontWeight: isActive(item.path, item.label) ? 800 : 600,
                 color: isActive(item.path, item.label)
                   ? "#000000"

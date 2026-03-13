@@ -192,17 +192,17 @@ export function ProjectDetail() {
   return (
     <div className="w-full bg-[#ffffff] min-h-screen font-['Montserrat',sans-serif]">
       {/* 1. The Sticky Hero Title (Background) */}
-      <div className="sticky top-32 z-0 w-full flex justify-center pb-32">
-        <h1 className="text-[12vw] leading-none tracking-tighter font-black text-[#1A1A1A] text-[200px]">
+      <div className="sticky top-20 md:top-24 z-0 w-full flex justify-center pb-16 md:pb-32 px-4">
+        <h1 className="text-center leading-none tracking-tighter font-black text-[#1A1A1A] text-[clamp(48px,12vw,200px)] break-words">
           {project.title}
         </h1>
       </div>
 
       {/* 2. The Main Content Wrapper (Foreground Curtain) */}
-      <div className="relative z-10 bg-white w-full min-h-screen pt-8 pb-32 shadow-[0_-10px_40px_rgba(0,0,0,0.05)]">
+      <div className="relative z-10 bg-white w-full min-h-screen pt-6 md:pt-8 pb-20 md:pb-32 shadow-[0_-10px_40px_rgba(0,0,0,0.05)]">
 
         {/* 3. Hero Image Block */}
-        <div className="w-full flex justify-center bg-[#d9d9d9] px-[0px] py-[30px]">
+        <div className="w-full flex justify-center bg-[#d9d9d9] px-3 md:px-0 py-4 md:py-8">
           {isBrandHeroProject ? (
             <PsiLabHero />
           ) : project.heroImage ? (
@@ -219,15 +219,15 @@ export function ProjectDetail() {
               <img
                 src={image_d8324035aea49e978f32e461ee7c6147c00a22a1}
                 alt="Hero image"
-                className="block mx-[80px] my-[0px]"
+                className="block mx-auto max-w-full h-auto"
               />
             </div>
           )}
         </div>
 
         {/* 4. Project Info Grid (Bordered) */}
-        <div className="border-t border-gray-200 mt-12 pt-12">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 px-8 md:px-16">
+        <div className="border-t border-gray-200 mt-10 md:mt-12 pt-10 md:pt-12">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 px-5 md:px-16">
 
             {/* Left Column */}
             <div className="col-span-1 md:col-span-4 flex flex-col justify-between min-h-[250px] md:min-h-[300px]">
@@ -274,7 +274,7 @@ export function ProjectDetail() {
 
         {/* 5. Vertical Image Gallery with Sticky Numbers */}
         {hasGallery && (
-          <div className="relative w-full flex justify-between px-4 md:px-16 mt-32">
+          <div className="relative w-full flex justify-between px-4 md:px-16 mt-16 md:mt-32">
 
             {/* Left Side (Sticky Number) */}
             <div className="hidden sm:block w-16 md:w-32 relative">
@@ -303,12 +303,12 @@ export function ProjectDetail() {
 
         {/* 6. Next Project Footer */}
         {project.nextProject && (
-          <div className="w-full mt-32 pt-16 flex flex-col items-center justify-center border-t border-gray-100">
+          <div className="w-full mt-20 md:mt-32 pt-12 md:pt-16 flex flex-col items-center justify-center border-t border-gray-100 px-4">
             <div className="text-[10px] md:text-xs text-gray-500 font-bold uppercase tracking-widest mb-4">
               (More Projects)
             </div>
             <Link to={`/work/${project.nextProject.slug}`} className="group">
-              <h2 className="text-[15vw] leading-none tracking-tighter font-black text-[#1A1A1A] group-hover:text-gray-300 transition-colors duration-500 cursor-pointer">
+              <h2 className="text-center leading-none tracking-tighter font-black text-[#1A1A1A] text-[clamp(42px,15vw,180px)] group-hover:text-gray-300 transition-colors duration-500 cursor-pointer break-words">
                 {project.nextProject.title}
               </h2>
             </Link>
