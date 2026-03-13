@@ -2,6 +2,9 @@ import { useState } from "react";
 import { StarburstIcon } from "./StarburstIcon";
 
 const APPWRITE_CONTACT_URL = (import.meta as any).env?.VITE_APPWRITE_CONTACT_URL as string | undefined;
+const CONTACT_COOLDOWN_MS = 30_000;
+const CONTACT_MIN_FILL_MS = 3_000;
+const CONTACT_LAST_SUBMIT_KEY = "contact_last_submit_at";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -13,6 +16,8 @@ export function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [honeypot, setHoneypot] = useState("");
+  const [formOpenedAt] = useState(() => Date.now());
   const [hoveredSocial, setHoveredSocial] = useState<string | null>(null);
 
   const handleChange = (
@@ -23,12 +28,31 @@ export function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Hidden field should stay empty for humans
+    if (honeypot.trim()) {
+      return;
+    }
+
     setSending(true);
     setErrorMessage(null);
 
     try {
       if (!APPWRITE_CONTACT_URL) {
         throw new Error("Missing VITE_APPWRITE_CONTACT_URL");
+      }
+
+      const now = Date.now();
+      if (now - formOpenedAt < CONTACT_MIN_FILL_MS) {
+        throw new Error("Please wait a moment before sending.");
+      }
+
+      if (typeof window !== "undefined") {
+        const lastSubmit = Number(window.localStorage.getItem(CONTACT_LAST_SUBMIT_KEY) || "0");
+        const remaining = CONTACT_COOLDOWN_MS - (now - lastSubmit);
+        if (remaining > 0) {
+          throw new Error(`Please wait ${Math.ceil(remaining / 1000)}s before sending again.`);
+        }
       }
 
       const res = await fetch(APPWRITE_CONTACT_URL, {
@@ -53,6 +77,9 @@ export function Contact() {
       setSubmitted(true);
       setTimeout(() => setSubmitted(false), 4000);
       setFormData({ name: "", email: "", subject: "", message: "" });
+      if (typeof window !== "undefined") {
+        window.localStorage.setItem(CONTACT_LAST_SUBMIT_KEY, String(Date.now()));
+      }
     } catch (error) {
       console.error(error);
       setErrorMessage(
@@ -152,6 +179,16 @@ export function Contact() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
+                <input
+                  type="text"
+                  name="company"
+                  value={honeypot}
+                  onChange={(e) => setHoneypot(e.target.value)}
+                  autoComplete="off"
+                  tabIndex={-1}
+                  aria-hidden="true"
+                  className="absolute -left-[9999px] h-0 w-0 opacity-0"
+                />
                 <div>
                   <label className="block text-[#a3a3a3] mb-2" style={labelStyle}>
                     Name
