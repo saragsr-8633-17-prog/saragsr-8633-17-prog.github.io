@@ -13,13 +13,10 @@ const isiipeImage1 = "/images/selam1/Bio.jpg";
 const isiipeImage2 = "/images/selam1/Gallery.jpg";
 const isiipeImage3 = "/images/selam1/Contact.jpg";
 
-const vstuCoverImage = "/images/vstu/vstu-cover.png";
-const vstuImage1 = "/images/vstu/vstu-1.png";
-const vstuImage2 = "/images/vstu/vstu-2.png";
-const vstuImage3 = "/images/vstu/1.png";
-const vstuImage4 = "/images/vstu/2.png";
-const vstuImage5 = "/images/vstu/3.png";
-const vstuImage6 = "/images/vstu/4.png";
+const vstuCoverImage = "/images/vstu/1.png";
+const vstuImage1 = "/images/vstu/2.png";
+const vstuImage2 = "/images/vstu/3.png";
+const vstuImage3 = "/images/vstu/4.png";
 
 // ---------- project data ----------
 
@@ -102,9 +99,6 @@ const PROJECTS: Record<string, ProjectData> = {
         vstuImage1,
         vstuImage2,
         vstuImage3,
-        vstuImage4,
-        vstuImage5,
-        vstuImage6,
       ],
     nextProject: { title: "AETHER UI", slug: "aether-ui" },
   },

@@ -34,7 +34,7 @@ const PROJECTS = [
     description:
       "UI/UX design for the VSTU educational mobile app, developed under Weyra Tech in partnership with Ethio-Telecom. The focus was on creating a clean, intuitive interface to improve information flow and student access across the platform.",
     tags: ["MOBILE APP", "UI/UX", "EDTECH"],
-    image: "/images/vstu/vstu-cover.png",
+    image: "/images/vstu/1.png",
   },
 ];
 
