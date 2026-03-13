@@ -7,7 +7,7 @@ const BLOG_POSTS = [
     date: "2026.1.4",
     title: "Unseen Currents: How Media and AI Shape Us Before We Notice",
     number: "01",
-    image: "https://images.unsplash.com/photo-1644088379091-d574269d422f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHRlY2glMjBiYWNrZ3JvdW5kfGVufDF8fHx8MTc3MzIxMjAyOHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: "/images/blog/unseen-cover.jpg",
   },
   {
     slug: "between-nothing-and-forever",
@@ -142,7 +142,7 @@ export function Blog() {
                 </p>
                 {hoveredPost.image && (
                   <DynamicImage
-                    slotId={`blog-cover-${hoveredPost.id || hoveredPost.slug}`}
+                    slotId={`blog-cover-${hoveredPost.slug}`}
                     fallbackSrc={hoveredPost.image}
                     alt={hoveredPost.title}
                     className="w-full h-full object-cover opacity-70"

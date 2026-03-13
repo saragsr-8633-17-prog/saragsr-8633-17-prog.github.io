@@ -130,7 +130,7 @@ const ARTICLES: Record<
           <div className="w-full mb-10 overflow-hidden">
             <DynamicImage
               slotId="blog-ai-image-1"
-              fallbackSrc="https://images.unsplash.com/photo-1660165458059-57cfb6cc87e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwYWJzdHJhY3R8ZW58MXx8fHwxNzczMTUzNzk2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              fallbackSrc="/images/blog/unseen1.jpg"
               alt="AI and creative work"
               className="w-full h-auto object-cover"
             />
