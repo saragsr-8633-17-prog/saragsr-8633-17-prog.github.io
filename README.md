@@ -14,5 +14,8 @@
   Add these variables to your `.env` file:
 
   - `VITE_APPWRITE_CONTACT_URL` (required) — your Appwrite Function HTTP endpoint
-  - `VITE_APPWRITE_API_KEY` (optional) — only if your function requires `x-appwrite-key`
+
+  Notes:
+  - Do not expose Appwrite API keys in frontend env files.
+  - Configure your Appwrite function to allow client execution (or route through your own backend).
   

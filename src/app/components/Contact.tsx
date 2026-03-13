@@ -2,7 +2,6 @@ import { useState } from "react";
 import { StarburstIcon } from "./StarburstIcon";
 
 const APPWRITE_CONTACT_URL = (import.meta as any).env?.VITE_APPWRITE_CONTACT_URL as string | undefined;
-const APPWRITE_API_KEY = (import.meta as any).env?.VITE_APPWRITE_API_KEY as string | undefined;
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -36,13 +35,19 @@ export function Contact() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          ...(APPWRITE_API_KEY ? { "x-appwrite-key": APPWRITE_API_KEY } : {}),
         },
         body: JSON.stringify(formData),
       });
 
       if (!res.ok) {
-        throw new Error("Failed to submit message");
+        let msg = "Failed to submit message";
+        try {
+          const data = await res.json();
+          if (typeof data?.message === "string") msg = data.message;
+        } catch {
+          // ignore non-json response
+        }
+        throw new Error(msg);
       }
 
       setSubmitted(true);
@@ -50,7 +55,11 @@ export function Contact() {
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
       console.error(error);
-      setErrorMessage("Could not send your message. Please try again.");
+      setErrorMessage(
+        error instanceof Error
+          ? `Could not send your message: ${error.message}`
+          : "Could not send your message. Please try again."
+      );
     } finally {
       setSending(false);
     }
