@@ -29,13 +29,12 @@ const PROJECTS = [
     id: "03",
     title: "VSTU",
     slug: "vstu",
-    category: "WEB DEVELOPMENT",
+    category: "UI/UX DESIGN",
     year: "2026",
     description:
-      "A university-focused digital platform concept for VSTU, designed to improve content clarity, information flow, and student access across key services.",
-    tags: ["WEB DEVELOPMENT", "UI/UX", "CONCEPT"],
-    image:
-      "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1200",
+      "UI/UX design for the VSTU educational mobile app, developed under Weyra Tech in partnership with Ethio-Telecom. The focus was on creating a clean, intuitive interface to improve information flow and student access across the platform.",
+    tags: ["MOBILE APP", "UI/UX", "EDTECH"],
+    image: "/images/vstu-cover.png",
   },
 ];
 

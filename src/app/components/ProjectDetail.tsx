@@ -13,6 +13,9 @@ const isiipeImage1 = "/images/selam1/Bio.jpg";
 const isiipeImage2 = "/images/selam1/Gallery.jpg";
 const isiipeImage3 = "/images/selam1/Contact.jpg";
 
+const vstuCoverImage = "/images/vstu-cover.png";
+const vstuImage1 = "/images/vstu-1.png";
+
 // ---------- project data ----------
 
 interface ProjectData {
@@ -82,15 +85,14 @@ const PROJECTS: Record<string, ProjectData> = {
   },
   vstu: {
     title: "VSTU",
-    subtitle: "Campus Information, Simplified",
-    category: ["WEB DEVELOPMENT", "UI/UX DESIGN", "CONCEPT"],
+    subtitle: "A Modern EdTech Interface",
+    category: ["MOBILE APP", "UI/UX DESIGN"],
     year: "2026",
-    type: "CONCEPT",
+    type: "CLIENT WORK",
     description:
-      "VSTU explores a modern university web experience focused on clearer navigation, better content hierarchy, and faster access to student-facing resources.",
-    heroImage:
-      "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600",
-    galleryImages: [],
+      "UI/UX design for a modern university mobile app developed under Weyra Tech in partnership with Ethio-Telecom. The interface focuses on clearer navigation, better content hierarchy, and faster access to student-facing resources.",
+    heroImage: vstuCoverImage,
+    galleryImages: [vstuCoverImage, vstuImage1],
     nextProject: { title: "AETHER UI", slug: "aether-ui" },
   },
   "aether-ui": {
