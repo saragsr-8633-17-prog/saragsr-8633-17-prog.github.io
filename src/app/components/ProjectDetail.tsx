@@ -195,7 +195,7 @@ export function ProjectDetail() {
                 slotId={`project-${slug}-hero`}
                 fallbackSrc={project.heroImage}
                 alt={`${project.title} hero`}
-                className="w-full h-full object-cover"
+                className={`w-full h-full ${slug === "isiipe" ? "object-contain" : "object-cover"}`}
               />
             </div>
           ) : (

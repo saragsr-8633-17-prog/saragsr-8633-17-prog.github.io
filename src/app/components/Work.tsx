@@ -11,18 +11,18 @@ const PROJECTS = [
     year: "2025",
     description:
       "A modern web design and development project for ISIIPE focused on accessibility, clear navigation, and a strong digital presence.",
-    tags: ["WEB DEVELOPMENT", "UI/UX", "VOLUNTEER"],
+    tags: ["WEB DESIGN", "UI/UX", "CLIENT"],
     image: "/images/selam1/Home.jpg",
   },
   {
     id: "02",
     title: "PSI-LAB",
     slug: "psi-lab",
-    category: "UI/UX DESIGN",
+    category: "BRANDING",
     year: "2026",
     description:
-      "A modern web design and UI/UX project for PSI-LAB. Focused on clean interfaces, intuitive user flows, and a polished client-facing digital experience.",
-    tags: ["WEB DESIGN", "UI/UX", "CLIENT"],
+      "A modern graphic design and branding project for PSI-LAB. Focused on clean layouts, intuitive reading paths, and a polished client-facing visual experience.",
+    tags: ["BRANDING", "IDENTITY", "CLIENT"],
     image: "/images/psi-lab-cover.jpeg",
   },
 ];
