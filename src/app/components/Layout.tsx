@@ -60,11 +60,12 @@ export function Layout() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex flex-col items-end font-['Montserrat',sans-serif]">
+        <nav className="hidden md:flex flex-col items-end min-w-[140px] lg:min-w-[170px] font-['Montserrat',sans-serif]">
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.label}
               to={item.path}
+              className="w-full text-right"
               style={{
                 fontSize: "14px",
                 lineHeight: "18px",
