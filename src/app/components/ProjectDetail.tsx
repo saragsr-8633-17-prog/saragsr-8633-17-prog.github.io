@@ -20,6 +20,14 @@ const vstuImage3 = "/images/vstu/2.png";
 const vstuImage4 = "/images/vstu/3.png";
 const vstuImage5 = "/images/vstu/4.png";
 
+const prestigeCoverImage = "/images/prestige%20v1/prestige-cover.png";
+const prestigeImage1 = "/images/prestige%20v1/1.png";
+const prestigeImage2 = "/images/prestige%20v1/2.png";
+const prestigeImage3 = "/images/prestige%20v1/3.png";
+const prestigeImage4 = "/images/prestige%20v1/4.png";
+const prestigeImage5 = "/images/prestige%20v1/5.png";
+const prestigeImage6 = "/images/prestige%20v1/6.png";
+
 // ---------- project data ----------
 
 interface ProjectData {
@@ -106,6 +114,26 @@ const PROJECTS: Record<string, ProjectData> = {
         vstuImage4,
         vstuImage5,
       ],
+    nextProject: { title: "Prestige addis V1", slug: "prestige-addis-v1" },
+  },
+  "prestige-addis-v1": {
+    title: "Prestige addis V1",
+    subtitle: "A polished mobile-first interface",
+    category: ["UI/UX DESIGN", "MOBILE APP", "CLIENT WORK"],
+    year: "2026",
+    type: "CLIENT WORK",
+    description:
+      "is a UI/UX concept focused on cleaner onboarding, stronger content hierarchy, and a premium visual language across core mobile screens.",
+    heroImage: prestigeCoverImage,
+    galleryImages: [
+      prestigeCoverImage,
+      prestigeImage1,
+      prestigeImage2,
+      prestigeImage3,
+      prestigeImage4,
+      prestigeImage5,
+      prestigeImage6,
+    ],
     nextProject: { title: "ISIIPE", slug: "isiipe" },
   },
 };
@@ -163,7 +191,7 @@ export function ProjectDetail() {
                 slotId={`project-${slug}-hero`}
                 fallbackSrc={project.heroImage}
                 alt={`${project.title} hero`}
-                className={`w-full h-full ${(slug === "isiipe" || slug === "vstu") ? "object-contain" : "object-cover"}`}
+                className={`w-full h-full ${(slug === "isiipe" || slug === "vstu" || slug === "prestige-addis-v1") ? "object-contain" : "object-cover"}`}
               />
             </div>
           ) : (
@@ -252,13 +280,13 @@ export function ProjectDetail() {
               {project.galleryImages.map((imgSrc, index) => (
                 <div
                   key={index}
-                  className={`${slug === "vstu" ? "" : "aspect-[16/10]"} bg-gray-200 w-full overflow-hidden`}
+                  className={`${slug === "vstu" || slug === "prestige-addis-v1" ? "" : "aspect-[16/10]"} bg-gray-200 w-full overflow-hidden`}
                 >
                   <DynamicImage
                     slotId={`project-${slug}-gallery-${index + 1}`}
                     fallbackSrc={imgSrc}
                     alt={`${project.title} detail ${index + 1}`}
-                    className={`${slug === "vstu" ? "w-full h-auto object-contain" : "w-full h-full object-cover"} opacity-90 hover:opacity-100 transition-all duration-700`}
+                    className={`${slug === "vstu" || slug === "prestige-addis-v1" ? "w-full h-auto object-contain" : "w-full h-full object-cover"} opacity-90 hover:opacity-100 transition-all duration-700`}
                   />
                 </div>
               ))}

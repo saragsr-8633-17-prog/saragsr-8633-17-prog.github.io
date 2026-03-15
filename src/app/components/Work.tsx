@@ -36,6 +36,17 @@ const PROJECTS = [
     tags: ["MOBILE APP", "UI/UX", "EDTECH"],
     image: "/images/vstu/vstu-cover.png",
   },
+  {
+    id: "04",
+    title: "Prestige addis V1",
+    slug: "prestige-addis-v1",
+    category: "UI/UX DESIGN",
+    year: "2026",
+    description:
+      "UI/UX exploration for Prestige Addis V1 focused on a modern interface system, stronger visual hierarchy, and clear interaction flow.",
+    tags: ["MOBILE APP", "UI/UX", "CLIENT"],
+    image: "/images/prestige%20v1/prestige-cover.png",
+  },
 ];
 
 export function Work() {
