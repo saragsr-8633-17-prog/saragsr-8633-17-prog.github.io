@@ -41,10 +41,10 @@ const PROJECTS = [
     title: "Prestige addis V1",
     slug: "prestige-addis-v1",
     category: "UI/UX DESIGN",
-    year: "2026",
+    year: "2024",
     description:
       "UI/UX exploration for Prestige Addis V1 focused on a modern interface system, stronger visual hierarchy, and clear interaction flow.",
-    tags: ["MOBILE APP", "UI/UX", "CLIENT"],
+    tags: ["UI/UX", "WEB DESIGN", "CONCEPT"],
     image: "/images/prestige%20v1/prestige-cover.png",
   },
 ];
