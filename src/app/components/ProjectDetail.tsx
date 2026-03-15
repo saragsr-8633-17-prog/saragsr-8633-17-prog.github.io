@@ -69,7 +69,7 @@ const PROJECTS: Record<string, ProjectData> = {
       psiLabImage2,
       psiLabImage3,
     ],
-    nextProject: { title: "ISIIPE", slug: "isiipe" },
+    nextProject: { title: "VSTU", slug: "vstu" },
   },
   isiipe: {
     title: "ISIIPE",
@@ -86,7 +86,7 @@ const PROJECTS: Record<string, ProjectData> = {
       isiipeImage2,
       isiipeImage3,
     ],
-    nextProject: { title: "VSTU", slug: "vstu" },
+    nextProject: { title: "PSI-LAB", slug: "psi-lab" },
   },
   vstu: {
     title: "VSTU",
@@ -106,7 +106,7 @@ const PROJECTS: Record<string, ProjectData> = {
         vstuImage4,
         vstuImage5,
       ],
-    nextProject: { title: "PSI-LAB", slug: "psi-lab" },
+    nextProject: { title: "ISIIPE", slug: "isiipe" },
   },
 };
 
