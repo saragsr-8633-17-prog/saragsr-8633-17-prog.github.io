@@ -35,6 +35,13 @@ const dawitImage3 = "/images/DAWIT/3.png";
 const dawitImage4 = "/images/DAWIT/4.png";
 const dawitImage5 = "/images/DAWIT/5.png";
 
+const magazineCoverImage = "/images/MAGAZINE/magazine-cover.jpg";
+const magazineImage1 = "/images/MAGAZINE/1.png";
+const magazineImage2 = "/images/MAGAZINE/2.jpg";
+const magazineImage3 = "/images/MAGAZINE/3.png";
+const magazineImage4 = "/images/MAGAZINE/4.png";
+const magazineImage5 = "/images/MAGAZINE/5.jpg";
+
 // ---------- project data ----------
 
 interface ProjectData {
@@ -89,7 +96,7 @@ const PROJECTS: Record<string, ProjectData> = {
   "selam-tesfaye-personal-brand-website": {
     title: "Selam Tesfaye",
     subtitle: "Personal Brand Website",
-    category: ["UI/UX DESIGN", "CLIENT WORK"],
+    category: ["WEB DESIGN", "UI/UX DESIGN", "CLIENT WORK"],
     year: "2025",
     type: "CLIENT WORK",
     description:
@@ -121,10 +128,10 @@ const PROJECTS: Record<string, ProjectData> = {
         vstuImage4,
         vstuImage5,
       ],
-    nextProject: { title: "Prestige addis V1", slug: "prestige-addis-v1" },
+    nextProject: { title: "Prestige Addis V1", slug: "prestige-addis-v1" },
   },
   "prestige-addis-v1": {
-    title: "Prestige addis V1",
+    title: "Prestige Addis V1",
     subtitle: "Spotlighting Creative Culture",
     category: ["UI/UX DESIGN", "WEB DESIGN", "CLIENT WORK"],
     year: "2024",
@@ -140,6 +147,28 @@ const PROJECTS: Record<string, ProjectData> = {
       prestigeImage4,
       prestigeImage5,
       prestigeImage6,
+    ],
+    nextProject: {
+      title: "Prestige Addis Editorial",
+      slug: "prestige-addis-editorial",
+    },
+  },
+  "prestige-addis-editorial": {
+    title: "Prestige Addis Editorial",
+    subtitle: "Editorial Design System",
+    category: ["EDITORIAL DESIGN", "BRANDING", "CLIENT WORK"],
+    year: "2024",
+    type: "CLIENT WORK",
+    description:
+      "is an editorial design project built to organize stories, visuals, and campaign content into a cohesive publication experience. The layout system emphasizes hierarchy, readability, and visual flow while keeping the brand voice bold and contemporary.",
+    heroImage: magazineCoverImage,
+    galleryImages: [
+      magazineCoverImage,
+      magazineImage1,
+      magazineImage2,
+      magazineImage3,
+      magazineImage4,
+      magazineImage5,
     ],
     nextProject: {
       title: "Dawit Tsige – Personal Brand Website",
@@ -223,7 +252,7 @@ export function ProjectDetail() {
                 slotId={`project-${slug}-hero`}
                 fallbackSrc={project.heroImage}
                 alt={`${project.title} hero`}
-                className={`w-full h-full ${(slug === "selam-tesfaye-personal-brand-website" || slug === "vstu" || slug === "prestige-addis-v1" || slug === "dawit-tsige-personal-brand-website") ? "object-contain" : "object-cover"}`}
+                className={`w-full h-full ${(slug === "selam-tesfaye-personal-brand-website" || slug === "vstu" || slug === "prestige-addis-v1" || slug === "prestige-addis-editorial" || slug === "dawit-tsige-personal-brand-website") ? "object-contain" : "object-cover"}`}
               />
             </div>
           ) : (
@@ -312,13 +341,13 @@ export function ProjectDetail() {
               {project.galleryImages.map((imgSrc, index) => (
                 <div
                   key={index}
-                  className={`${slug === "vstu" || slug === "prestige-addis-v1" || slug === "dawit-tsige-personal-brand-website" ? "min-h-[220px] md:min-h-[360px]" : "aspect-[16/10]"} bg-gray-200 w-full overflow-hidden`}
+                  className={`${slug === "vstu" || slug === "prestige-addis-v1" || slug === "prestige-addis-editorial" || slug === "dawit-tsige-personal-brand-website" ? "min-h-[220px] md:min-h-[360px]" : "aspect-[16/10]"} bg-gray-200 w-full overflow-hidden`}
                 >
                   <DynamicImage
                     slotId={`project-${slug}-gallery-${index + 1}`}
                     fallbackSrc={imgSrc}
                     alt={`${project.title} detail ${index + 1}`}
-                    className={`${slug === "vstu" || slug === "prestige-addis-v1" || slug === "dawit-tsige-personal-brand-website" ? "w-full h-auto object-contain" : "w-full h-full object-cover"} opacity-90 hover:opacity-100 transition-all duration-700`}
+                    className={`${slug === "vstu" || slug === "prestige-addis-v1" || slug === "prestige-addis-editorial" || slug === "dawit-tsige-personal-brand-website" ? "w-full h-auto object-contain" : "w-full h-full object-cover"} opacity-90 hover:opacity-100 transition-all duration-700`}
                     loading="lazy"
                     decoding="async"
                   />

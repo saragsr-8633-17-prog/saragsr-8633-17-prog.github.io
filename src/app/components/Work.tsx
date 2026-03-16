@@ -7,11 +7,11 @@ const PROJECTS = [
     id: "01",
     title: "Selam Tesfaye – Personal Brand Website",
     slug: "selam-tesfaye-personal-brand-website",
-    category: "WEB DEVELOPMENT",
+    category: "UI/UX DESIGN",
     year: "2025",
     description:
       "A personal brand website for Selam Tesfaye, designed and developed for ISIIPE with a focus on accessibility, clear navigation, and a refined digital presence.",
-    tags: ["WEB DESIGN", "UI/UX", "CLIENT"],
+    tags: ["PERSONAL BRAND", "WEB DESIGN", "CLIENT"],
     image: "/images/selam1/Home.jpg",
   },
   {
@@ -19,7 +19,7 @@ const PROJECTS = [
     title: "PSI-LAB",
     slug: "psi-lab",
     category: "BRANDING",
-    year: "2026",
+    year: "2025",
     description:
       "A modern graphic design and branding project for PSI-LAB. Focused on clean layouts, intuitive reading paths, and a polished client-facing visual experience.",
     tags: ["BRANDING", "IDENTITY", "CLIENT"],
@@ -38,7 +38,7 @@ const PROJECTS = [
   },
   {
     id: "04",
-    title: "Prestige addis V1",
+    title: "Prestige Addis V1",
     slug: "prestige-addis-v1",
     category: "UI/UX DESIGN",
     year: "2024",
@@ -51,12 +51,23 @@ const PROJECTS = [
     id: "05",
     title: "Dawit Tsige – Personal Brand Website",
     slug: "dawit-tsige-personal-brand-website",
-    category: "WEB DEVELOPMENT",
-    year: "2026",
+    category: "UI/UX DESIGN",
+    year: "2025",
     description:
       "A personal brand website designed and developed for Dawit Tsige, focused on strong storytelling, a clear content hierarchy, and a polished digital identity.",
     tags: ["PERSONAL BRAND", "WEB DESIGN", "CLIENT"],
     image: "/images/DAWIT/DAWIT-COVER.png",
+  },
+  {
+    id: "06",
+    title: "Prestige Addis Editorial",
+    slug: "prestige-addis-editorial",
+    category: "BRANDING",
+    year: "2024",
+    description:
+      "An editorial design project for Prestige Addis focused on bold typographic rhythm, clean grid systems, and image-led storytelling.",
+    tags: ["EDITORIAL", "BRANDING", "CLIENT"],
+    image: "/images/MAGAZINE/magazine-cover.jpg",
   },
 ];
 
